@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "args": [
+                "test/**/*.js",
+                "--no-timeouts"
+            ],
+            "cwd": "${workspaceRoot}",
+            "env": {
+                "NODE_ENV": "testing"
+            },
+            "name": "Run mocha",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "request": "launch",
+            "runtimeExecutable": null,
+            "stopOnEntry": false,
+            "type": "node"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Invoke function",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/node_modules/.bin/sls",
+            "args": [
+                "invoke",
+                "local",
+                "--function",
+                "sign",
+                "--path",
+                "${workspaceRoot}/test/data/event.json"
+            ],
+            "env": {
+                "NODE_ENV": "dev"
+            }
+        }
+    ]
+}
