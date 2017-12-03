@@ -1,28 +1,18 @@
 const chai = require('chai');
 const expect = chai.expect;
 const assert = chai.assert;
+const fs = require('fs');
 
 const lib = require('../lib/lib.js');
 
+const s3PostPolicy = './test/data/policy.json';
+
 describe('AWS API Request Functions', function() {
-
-	describe('sign', function() {
-		it('Signs a given message with a key', function() {
-			var data = lib.sign();
-			assert(data != null, 'Function should return data');
-		});
-	});
-
-	describe('getSignatureKey', function() {
-		it('Derives a Signing Key for Signature Version 4', function() {
-			var data = lib.getSignatureKey();
-			assert(data != null, 'Function should return data');
-		});
-	});
 
 	describe('signPolicy', function() {
 		it('Creates a signed policy document for an S3 POST form', function() {
-			var data = lib.signPolicy();
+			let policy = JSON.parse(eval(fs.readFileSync(s3PostPolicy)));
+			var data = lib.signPolicy(policy, 'AKIAIOSFODNN7EXAMPLE/20151229/us-east-1/s3/aws4_request');
 			assert(data != null, 'Function should return data');
 		});
 	});

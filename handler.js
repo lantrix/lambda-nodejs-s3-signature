@@ -1,6 +1,6 @@
 'use strict';
 
-const lib = require('./lib/lib.js');
+const lib = require('lib/lib.js');
 
 module.exports.sign = (event, context, callback) => {
 	/** Immediate response for WarmUP plugin */
@@ -11,12 +11,24 @@ module.exports.sign = (event, context, callback) => {
 
 	// Will sign the policy document or REST headers.
 	console.log('Received event:', JSON.stringify(event, null, 2));
-	var requestPayload = event.body
-	if (requestPayload.get('headers')){
-		var response_data = lib.signHeaders();
+	var requestPayload = event.body;
+	var response_data = {};
+	console.log(requestPayload);
+	if (requestPayload){
+		// var response_data = lib.signHeaders();
+		response_data = { 'response': true };
 	} else {
 		// TODO: get credential
-		response_data = lib.signPolicy(request.data, credential);	
+		// response_data = lib.signPolicy(request.data, credential);
+		response_data = {'response': true};
 	}
-	callback(null, response_data);
+	callback(null, {
+		'statusCode': 200,
+		'headers': {
+			'Access-Control-Allow-Origin': 'test.noagenda.info',
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Content-Type, Cache-Control, X-Requested-With, X-Amz-Date, Authorization, X-Api-Key, X-Amz-Security-Token'
+		},
+		'body': response_data
+	});
 };
