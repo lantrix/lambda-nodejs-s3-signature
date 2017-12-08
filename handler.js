@@ -11,16 +11,20 @@ module.exports.sign = (event, context, callback) => {
 	}
 
 	// Will sign the policy document or REST headers.
-	console.log('Received event:', JSON.stringify(event, null, 2));
+	//console.log('Received event:', JSON.stringify(event, null, 2));
 	var requestPayload = event.body;
 	var response_data = {};
 	console.log(requestPayload);
 	if (requestPayload){
-		// var response_data = lib.signHeaders();
-		response_data = { response: true };
+		JSON.parse(requestPayload).conditions.forEach(condition => {
+			if (lib.checkValue(condition, 'x-amz-credential')){
+				console.log(condition['x-amz-credential']);
+				response_data = lib.signPolicy(requestPayload, condition['x-amz-credential']);
+			}
+		});
 	} else {
 		// TODO: get credential
-		// response_data = lib.signPolicy(request.data, credential);
+		// var response_data = lib.signHeaders();
 		response_data = { response: true };
 	}
 	callback(null, {
