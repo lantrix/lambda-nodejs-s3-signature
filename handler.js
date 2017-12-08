@@ -1,6 +1,7 @@
 'use strict';
 
-const lib = require('lib/lib.js');
+const lib = require('./lib/lib.js');
+const AllowOriginHeader = process.env.AccessControlAllowOrigin;
 
 module.exports.sign = (event, context, callback) => {
 	/** Immediate response for WarmUP plugin */
@@ -16,19 +17,19 @@ module.exports.sign = (event, context, callback) => {
 	console.log(requestPayload);
 	if (requestPayload){
 		// var response_data = lib.signHeaders();
-		response_data = { 'response': true };
+		response_data = { response: true };
 	} else {
 		// TODO: get credential
 		// response_data = lib.signPolicy(request.data, credential);
-		response_data = {'response': true};
+		response_data = { response: true };
 	}
 	callback(null, {
 		'statusCode': 200,
 		'headers': {
-			'Access-Control-Allow-Origin': 'test.noagenda.info',
+			'Access-Control-Allow-Origin': AllowOriginHeader,
 			'Content-Type': 'application/json',
-			'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Content-Type, Cache-Control, X-Requested-With, X-Amz-Date, Authorization, X-Api-Key, X-Amz-Security-Token'
+			'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Origin, Content-Type, Cache-Control, X-Requested-With, X-Amz-Date, Authorization, X-Api-Key, X-Amz-Security-Token'
 		},
-		'body': response_data
+		'body': JSON.stringify(response_data)
 	});
 };

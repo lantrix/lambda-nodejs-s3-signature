@@ -17,6 +17,21 @@ functions:
       - http:
           path: /
           method: post
+          cors:
+            origin: ${file(./config.yml):AccessControlAllowOrigin}
+            headers:
+              - Content-Type
+              - Origin
+              - X-Amz-ACL
+              - X-Amz-Date
+              - Authorization
+              - X-Requested-With
+              - Cache-Control
+              - X-Api-Key
+              - X-Amz-Security-Token
+            allowCredentials: true
+    environment:
+      AccessControlAllowOrigin: ${file(./config.yml):AccessControlAllowOrigin}
 
 plugins:
   - serverless-plugin-warmup

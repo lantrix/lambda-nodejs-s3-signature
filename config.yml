@@ -1,0 +1,2 @@
+# Signing Endpoint CORS config
+AccessControlAllowOrigin: http://your.origin.com
