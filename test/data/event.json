@@ -1,0 +1,63 @@
+{
+    "resource": "/",
+    "path": "/",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "application/json",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,nl;q=0.6",
+        "cache-control": "no-cache",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-Country": "AU",
+        "content-type": "application/json; charset=UTF-8",
+        "Host": "k8iuowi4m2.execute-api.us-east-1.amazonaws.com",
+        "origin": "http://your.origin.com",
+        "Referer": "http://your.origin.com/",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+        "Via": "2.0 750e03156c4b715245548214b1baa617.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "JAaVJbxtFub7AjaOqM1ZLu7GIHx7CUhX5pkxl4Vxxx",
+        "X-Amzn-Trace-Id": "Root=1-5a2a2766-xxxxx",
+        "X-Forwarded-For": "1.2.3.4, 4.3.2.1",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https",
+        "x-requested-with": "XMLHttpRequest"
+    },
+    "queryStringParameters": {
+        "v4": "true"
+    },
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "requestTime": "08/Dec/2017:05:47:18 +0000",
+        "path": "/dev",
+        "accountId": "495140990159",
+        "protocol": "HTTP/1.1",
+        "resourceId": "u9fvgsdg1b",
+        "stage": "dev",
+        "requestTimeEpoch": 1512712038265,
+        "requestId": "40632776-dbdb-11e7-813d-xxxxxxxx",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "apiKey": "",
+            "sourceIp": "1.2.3.4",
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+            "user": null
+        },
+        "resourcePath": "/",
+        "httpMethod": "POST",
+        "apiId": "abcd1234"
+    },
+    "body": "{\"expiration\":\"2017-12-08T05:52:17.698Z\",\"conditions\":[{\"acl\":\"private\"},{\"bucket\":\"your.origin.com\"},{\"Content-Type\":\"image/jpeg\"},{\"success_action_status\":\"200\"},{\"x-amz-algorithm\":\"AWS4-HMAC-SHA256\"},{\"key\":\"78a43f1e-a462-4fa1-9422-9e688614225e.jpg\"},{\"x-amz-credential\":\"AAABBBBEXAMPLE/20171208/us-east-1/s3/aws4_request\"},{\"x-amz-date\":\"20171208T054717Z\"},{\"x-amz-meta-qqfilename\":\"8w8Bxxyb_400x400.jpg\"}]}",
+    "isBase64Encoded": false
+}
