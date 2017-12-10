@@ -39,7 +39,7 @@
         "resourceId": "u9fvgsdg1b",
         "stage": "dev",
         "requestTimeEpoch": 1512712038265,
-        "requestId": "40632776-dbdb-11e7-813d-xxxxxxxx",
+        "requestId": "fc4f6493-a56b-4891-80b0-13c3858a3d3b",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,
@@ -58,6 +58,6 @@
         "httpMethod": "POST",
         "apiId": "abcd1234"
     },
-    "body": "{\"expiration\":\"2017-12-08T05:52:17.698Z\",\"conditions\":[{\"acl\":\"private\"},{\"bucket\":\"your.origin.com\"},{\"Content-Type\":\"image/jpeg\"},{\"success_action_status\":\"200\"},{\"x-amz-algorithm\":\"AWS4-HMAC-SHA256\"},{\"key\":\"78a43f1e-a462-4fa1-9422-9e688614225e.jpg\"},{\"x-amz-credential\":\"AAABBBBEXAMPLE/20171208/us-east-1/s3/aws4_request\"},{\"x-amz-date\":\"20171208T054717Z\"},{\"x-amz-meta-qqfilename\":\"8w8Bxxyb_400x400.jpg\"}]}",
+    "body": "{\"expiration\":\"2017-12-08T05:52:17.698Z\",\"conditions\":[{\"acl\":\"private\"},{\"bucket\":\"your.origin.com\"},{\"Content-Type\":\"image/jpeg\"},{\"success_action_status\":\"200\"},{\"x-amz-algorithm\":\"AWS4-HMAC-SHA256\"},{\"key\":\"78a43f1e-a462-4fa1-9422-9e688614225e.jpg\"},{\"x-amz-credential\":\"AKIAIOSFODNN7EXAMPLE/20171208/us-east-1/s3/aws4_request\"},{\"x-amz-date\":\"20171208T054717Z\"},{\"x-amz-meta-qqfilename\":\"8w8Bxxyb_400x400.jpg\"}]}",
     "isBase64Encoded": false
 }
