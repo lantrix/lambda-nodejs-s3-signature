@@ -5,6 +5,9 @@ const fs = require('fs');
 
 const lib = require('../lib/lib.js');
 
+// Pre load environment variables with testing settings from .env
+require('dotenv').config({ path: '.env' });
+
 const s3PostPolicy = './test/data/policy.json';
 
 describe('AWS API Request Functions', function() {

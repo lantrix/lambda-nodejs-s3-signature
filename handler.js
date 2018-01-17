@@ -17,7 +17,7 @@ module.exports.sign = (event, context, callback) => {
 	console.log(requestPayload);
 	if (requestPayload){
 		JSON.parse(requestPayload).conditions.forEach(condition => {
-			if (lib.checkValue(condition, 'x-amz-credential')){
+			if ('x-amz-credential' in condition){
 				console.log(condition['x-amz-credential']);
 				response_data = lib.signPolicy(requestPayload, condition['x-amz-credential']);
 			}
