@@ -10,6 +10,11 @@ require('dotenv').config({ path: '.env' });
 
 const s3PostPolicy = './test/data/policy.json';
 
+var testHeaders = `AWS4-HMAC-SHA256
+20130524T000000Z
+20130524/us-east-1/s3/aws4_request
+cee3fed04b70f867d036f722359b0b1f2f0e5dc0efadbc082b76c4c60e316455`;
+
 describe('AWS API Request Functions', function() {
 
 	describe('signPolicy', function() {
@@ -22,7 +27,7 @@ describe('AWS API Request Functions', function() {
 
 	describe('signHeaders', function() {
 		it('Creates a signature Header for a chunked upload', function() {
-			var data = lib.signHeaders();
+			var data = lib.signHeaders(testHeaders);
 			assert(data != null, 'Function should return data');
 		});
 	});
