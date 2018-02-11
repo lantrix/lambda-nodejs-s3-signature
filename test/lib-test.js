@@ -22,6 +22,9 @@ describe('AWS API Request Functions', function() {
 			let policy = JSON.parse(eval(fs.readFileSync(s3PostPolicy)));
 			var data = lib.signPolicy(policy, 'AKIAIOSFODNN7EXAMPLE/20151229/us-east-1/s3/aws4_request');
 			assert(data != null, 'Function should return data');
+			expect(data).to.be.a('object');
+			expect(data).to.have.property('policy').to.have.length.above(0);
+			expect(data).to.have.property('signature').to.have.length.above(0);
 		});
 	});
 
@@ -29,6 +32,8 @@ describe('AWS API Request Functions', function() {
 		it('Creates a signature Header for a chunked upload', function() {
 			var data = lib.signHeaders(testHeaders);
 			assert(data != null, 'Function should return data');
+			expect(data).to.be.a('object');
+			expect(data).to.have.property('signature').to.have.length.above(0);
 		});
 	});
 });
