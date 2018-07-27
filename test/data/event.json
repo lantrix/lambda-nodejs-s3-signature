@@ -58,6 +58,6 @@
         "httpMethod": "POST",
         "apiId": "abcd1234"
     },
-    "body": "{\"expiration\":\"2017-12-08T05:52:17.698Z\",\"conditions\":[{\"acl\":\"private\"},{\"bucket\":\"your.origin.com\"},{\"Content-Type\":\"image/jpeg\"},{\"success_action_status\":\"200\"},{\"x-amz-algorithm\":\"AWS4-HMAC-SHA256\"},{\"key\":\"78a43f1e-a462-4fa1-9422-9e688614225e.jpg\"},{\"x-amz-credential\":\"AKIAIOSFODNN7EXAMPLE/20171208/us-east-1/s3/aws4_request\"},{\"x-amz-date\":\"20171208T054717Z\"},{\"x-amz-meta-qqfilename\":\"8w8Bxxyb_400x400.jpg\"}]}",
+    "body": "{\"expiration\":\"2017-12-08T05:52:17.698Z\",\"conditions\":[{\"acl\":\"private\"},{\"bucket\":\"resizer.noagenda.info\"},{\"Content-Type\":\"image/jpeg\"},{\"success_action_status\":\"200\"},{\"x-amz-algorithm\":\"AWS4-HMAC-SHA256\"},{\"key\":\"78a43f1e-a462-4fa1-9422-9e688614225e.jpg\"},{\"x-amz-credential\":\"AKIAIOSFODNN7EXAMPLE/20171208/us-east-1/s3/aws4_request\"},{\"x-amz-date\":\"20171208T054717Z\"},{\"x-amz-meta-qqfilename\":\"8w8Bxxyb_400x400.jpg\"}]}",
     "isBase64Encoded": false
 }
