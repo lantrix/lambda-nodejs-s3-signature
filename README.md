@@ -3,6 +3,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/lantrix/lambda-nodejs-s3-signature/badge.svg?targetFile=package.json)](https://snyk.io/test/github/lantrix/lambda-nodejs-s3-signature?targetFile=package.json)
 [![Known Vulnerabilities](https://travis-ci.org/lantrix/lambda-nodejs-s3-signature.svg?branch=master
 )](https://travis-ci.org/lantrix/lambda-nodejs-s3-signature/builds)
+[![Coverage Status](https://coveralls.io/repos/github/lantrix/lambda-nodejs-s3-signature/badge.svg?branch=master)](https://coveralls.io/github/lantrix/lambda-nodejs-s3-signature?branch=master)
 
 Sign AJAX/CORS requests with AWS Lambda for direct browser to S3 uploads
 
